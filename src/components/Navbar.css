@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #deb480;
+  gap: 45px;
+}
+
+/* Linkコンポーネントは検証ツールで確認するとaタグとして働いている */
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: black;
+}
