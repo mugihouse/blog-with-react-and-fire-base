@@ -10,7 +10,9 @@ import { useState } from "react";
 
 function App() {
   // ログインしているかをstateで管理
-  const [isAuth, setIsAuth] = useState(false);
+  // useState(false)にしているとリロードのたびにログアウト状態になる
+  // localStorage上に情報がある場合はそこから持ってくる
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
   return (
     <Router>
